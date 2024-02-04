@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "img": "./imagenes/MD_808.jpg",
+        "modelo": "Autel MD808", 
+        "precio": 400,
+        "cantidad": 1     
+    },
+    {
+        "id": 2,
+        "img": "./imagenes/MD_808Pro.jpg",
+        "modelo": "AutelMD808 Pro",
+        "precio": 500,
+        "cantidad": 1 
+    },
+    {
+        "id": 3,
+        "img": "./imagenes/MX_808.jpg",
+        "modelo": "Autel MX808",
+        "precio": 700,
+        "cantidad": 1
+    },
+    {
+        "id": 4,
+        "img": "./imagenes/MX_808TS.jpg",
+        "modelo": "Autel MX808 TS",
+        "precio": 750,
+        "cantidad": 1 
+    },
+    {
+        "id": 5,
+        "img": "./imagenes/Ms_905Mini.jpg",
+        "modelo": "Autel MS905 Mini",
+        "precio": 1300,
+        "cantidad": 1
+    },
+    {
+        "id": 6,
+        "img": "./imagenes/MS_906BT.jpg",
+        "modelo": "Autel MS906",
+        "precio": 1500,
+        "cantidad": 1 
+    },
+    {
+        "id": 7,
+        "img": "./imagenes/MS_906BT.jpg",
+        "modelo": "Autel MS906 BT",
+        "precio": 1700,
+        "cantidad": 1 
+    },
+    {
+        "id": 8,
+        "img": "./imagenes/MS_908.jpg",
+        "modelo": "Autel MS908",
+        "precio": 1900,
+        "cantidad": 1 
+    },
+    {
+        "id": 9,
+        "modelo": "Adaptador Nissan 14 pines",
+        "precio": 20,
+        "cantidad": 1 
+    },
+    {
+        "id": 10,
+        "modelo": "Adaptador PSA 2 pines",
+        "precio": 20,
+        "cantidad": 1
+    },
+    {
+        "id": 11,
+        "modelo": "Adaptador Benz 14 pines",
+        "precio": 20,
+        "cantidad": 1
+    },
+    {
+        "id": 12,
+        "modelo": "Adaptador Fiat 3 pines",
+        "precio": 20,
+        "cantidad": 1
+    }
+]

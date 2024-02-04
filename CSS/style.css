@@ -1,0 +1,287 @@
+/*LOADER*/
+.loader {
+    width: 48px;
+    height: 48px;
+    border-width: 3px;
+    border-style: dashed solid  solid dotted;
+    border-color: #37BBED #37BBED transparent #37BBED;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+  .loader::after {
+    content: '';  
+    box-sizing: border-box;
+    position: absolute;
+    left: 20px;
+    top: 31px;
+    border: 10px solid transparent;
+    border-right-color: #37BBED;
+    transform: rotate(-40deg);
+  }
+  
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
+  
+
+/* ---------------------------------------CARDS--------------------------------------- */
+
+.card{
+    
+    width: 10rem;
+    background-color: white;
+    border: solid 1px black;
+    border-radius: 0,5rem;
+    margin: 25px;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+}
+.boton-carrito{
+    background-color: black;
+    font-family: sans-serif;
+    color: white;
+    justify-content: center;
+}
+h3{
+    color: white;
+    background-color: orange;
+    border-radius: 6px;
+    padding: 6px;
+    font-family: sans-serif;
+    text-align: center;
+}
+h5{
+    color: black;
+    font-size: 15px;
+    font-family: sans-serif;
+}
+.imagenesProductos{
+    width: 13rem;
+}
+/*--------------------VER CARRITO--------------------------*/
+.eliminar-producto{
+    background-color: none;
+}
+.contenedor-checkout {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.header-checkout{
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    font-family: sans-serif;
+    flex-direction: column;
+}
+.checkout-header-titulo{
+    justify-self: start;
+    color: white;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.header-button{
+    justify-self: end;
+    color: white;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.contenido-carrito{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 10px;
+    
+}
+
+.total-compra{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 7px;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    font-family: sans-serif;
+}
+.btn{
+    padding: 1rem;
+    background-color: orange;
+    color: white;
+    font-family: sans-serif;
+    font-size: 16px;
+    justify-content: center;
+
+}
+.container{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*Cantidad carrito*/
+.cantidadCarrito{
+    background-color: orangered;
+    color: white;
+    border-radius: 30%;
+    font-size: 15px;
+    padding: 4px;
+    position: absolute;
+    display: none;
+}
+
+/*--------------------HEADER--------------------------*/
+header{
+    background-color: black;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+   
+}
+
+header nav ul {
+    
+    display: flex;
+    
+}
+header nav ul li {
+    list-style-type: none;
+    text-align: right;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+header nav ul li a{
+    text-decoration: none;
+    align-self: center;
+    padding: 5px;
+    background-color: orange;
+    color: white;
+    border-radius: 5px;
+    font-family: sans-serif;
+    
+}
+header nav ul li div p{
+    text-decoration: none;
+    align-self: center;
+    padding: 5px;
+    background-color: orange;
+    color: white;
+    border-radius: 5px;
+    font-family: sans-serif;
+}
+.button{
+    text-decoration: none;
+    align-self: center;
+    padding: 5px;
+    background-color: orange;
+    color: white;
+    border-radius: 5px;
+}
+.logo-header{
+    width: 15%;
+}
+
+.div-imagenes-destacadas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.imagenes-destacadas{
+    height: 20rem;
+    justify-content: center;
+}
+footer{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    
+}
+.logo{
+    width: 15rem;
+    
+}
+.contenedor-principal{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.bajada{
+    font-size: 20px;
+    font-family: sans-serif;
+    background-color: orangered;
+    padding: 15px;
+    border-radius: 25px;
+}
+.frase-inicial{
+    font-family: sans-serif;
+    font-size: 20px;
+    justify-content: center;
+
+}
+/* ----------------- PRODUCTOS --------------------*/
+.flex-box-imagenes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.imagenes-productos{
+    display: flex;
+    width: 17rem;
+}
+h2{
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 8px;
+}
+/*----------------- FORMULARIO -------------------*/
+.formulario{
+    display: flex;
+    flex-direction: column;
+    padding-right: 20%;
+    padding-left: 20%;
+    padding-top: 5%;
+    padding-bottom: 10%;
+}
+
+/*
+header{ 
+    background-color: white;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    padding: 0.7rem 0
+}
+header img{
+    width: 12%;
+    margin-top: 2px;
+    margin-left: 2px; */
