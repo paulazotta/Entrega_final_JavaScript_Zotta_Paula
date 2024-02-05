@@ -1,4 +1,5 @@
 let valorDelDolar = 1100;
+
 // CREAR CARRITO 
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
@@ -25,16 +26,12 @@ function agregarAlCarrito (id, modelo, precio, cantidad, img){
 
 const container = document.getElementById("container");
 
-//function mostrarProductos (){
-    const mostrarProductos = async() => {
-        const response = await fetch ("javascript/productos.json")
-        const data = await response.json();
-        console.log(data);
+const mostrarProductos = async() => {
+    const response = await fetch ("javascript/productos.json")
+    const data = await response.json();
+        //console.log(data);
     
-    // fetch ("javascript/productos.json")
-    // .then (resp => resp.json())
-    // .then (data => {
-        const arrayProductos = data;
+    const arrayProductos = data;
 
         arrayProductos.forEach (el => {
             // Creo las cards
@@ -89,7 +86,7 @@ const container = document.getElementById("container");
     };
 
 
-// BOTÓN MOSTRAR / OCULTAR con LOADER
+// BOTÓN MOSTRAR / OCULTAR EQUIPOS con LOADER
 const botonHTML = document.getElementById("btn");
 const agregarLoader = document.getElementById("agregarLoader");
 
@@ -159,7 +156,7 @@ const pintarCarrito = () => {
 // Agrego la X
     headerCheckOut.appendChild(headerButton);
 
-// Contenido del carrito 
+// Contenido del carrito // ACA HAY QUE SACAR O CORREGIR LO DE LA IMAGEN 
     carrito.forEach ((el) =>{
         let contenidoCarrito = document.createElement("div");
         contenidoCarrito.className = "contenido-carrito";
@@ -188,8 +185,9 @@ const pintarCarrito = () => {
 eliminar.addEventListener("click", () => eliminarProducto(el.id));
 numeroCarrito();
 guardarStorage();
-});
 
+
+});
 
         
 // SUMAR EL TOTAL DEL CARRITO 
@@ -209,6 +207,8 @@ guardarStorage();
 
 const verCarrito =document.getElementById("verCarrito");
 verCarrito.addEventListener("click", pintarCarrito);
+
+
 
 const eliminarProducto =(id) =>{
     const foundIndex = carrito.findIndex((el) => el.id === id);
