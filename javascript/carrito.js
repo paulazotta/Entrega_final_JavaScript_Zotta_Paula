@@ -1,4 +1,17 @@
-let valorDelDolar = 1100;
+// API DOLAR 
+let blue;
+
+const pruebaDolar = async () => {
+    const dolarApi = await fetch ("https://dolarapi.com/v1/dolares/blue")
+    const data = await dolarApi.json();
+    //console.log(data);
+
+    blue = data.venta
+    //console.log(data.venta)
+}
+
+pruebaDolar();
+
 
 // CREAR CARRITO 
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
@@ -46,7 +59,7 @@ const mostrarProductos = async() => {
                 modelo.innerText = el.modelo;
                 
                 const precio = document.createElement("h5");
-                precio.innerText = `$${el.precio * valorDelDolar}`;
+                precio.innerText = `$${el.precio * blue}`;
                 
                 const botonAregarCarrito =document.createElement("button");
                 botonAregarCarrito.innerText = "Agregar al carrito";
@@ -65,7 +78,7 @@ const mostrarProductos = async() => {
                         }
                     });
                 } else {
-                    agregarAlCarrito(el.id, el.modelo, el.precio * valorDelDolar, el.cantidad, el.img);
+                    agregarAlCarrito(el.id, el.modelo, (el.precio * blue), el.cantidad, el.img);
                 }
                 numeroCarrito(); 
                 guardarStorage(); 
@@ -156,16 +169,15 @@ const pintarCarrito = () => {
 // Agrego la X
     headerCheckOut.appendChild(headerButton);
 
-// Contenido del carrito // ACA HAY QUE SACAR O CORREGIR LO DE LA IMAGEN 
+// Contenido del carrito // 
     carrito.forEach ((el) =>{
         let contenidoCarrito = document.createElement("div");
         contenidoCarrito.className = "contenido-carrito";
         contenidoCarrito.innerHTML = `
         <h3> Producto ${el.modelo}</h3>
-        <p> Precio $ ${el.precio * valorDelDolar}</p>
+        <p> Precio $ ${el.precio}</p>
         <p>Cantidad: ${el.cantidad}</p>
         <p>Total: $ ${el.precio * el.cantidad}</p>
-        <img> ${el.img}</img>
         `;
         guardarStorage();
  // Lo agrego
@@ -191,7 +203,7 @@ guardarStorage();
 
         
 // SUMAR EL TOTAL DEL CARRITO 
-    const total = carrito.reduce((acumulador, el) => acumulador + el.precio * valorDelDolar * el.cantidad, 0); 
+    const total = carrito.reduce((acumulador, el) => acumulador + el.precio * el.cantidad, 0); 
        
 // Mostrar total de la compra    
     const totalDeLaCompra = document.createElement("div");
