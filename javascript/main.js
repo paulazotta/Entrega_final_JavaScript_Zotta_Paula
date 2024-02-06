@@ -6,7 +6,7 @@ header.innerHTML = `
         <ul>
             <li>
                 <img class="logo-header" src="imagenes/logo.jpg" alt="logo_diagnostico">
-                <a href="HTML/contacto.html">Contacto</a>
+                <a href="../html/contacto.html">Contacto</a>
                 <div id="verCarrito">
                     <p class="texto-carrito">Ver carrito🛒 <span id="cantidadCarrito" class="cantidadCarrito"></span></p>
                 </div> 

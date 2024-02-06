@@ -1,13 +1,22 @@
+
 // API DOLAR 
 let blue;
 
 const pruebaDolar = async () => {
-    const dolarApi = await fetch ("https://dolarapi.com/v1/dolares/blue")
-    const data = await dolarApi.json();
-    //console.log(data);
+    try{
+        const dolarApi = await fetch ("https://dolarapi.com/v1/dolares/blue")
+        const data = await dolarApi.json();
+        //console.log(data);
+    
+        blue = data.venta
+        //console.log(data.venta)
+    } catch (error) {
+        //console.log("error")
+        blue = 1200;
+    } finally{
+        //console.log("proceso terminado")
+    }
 
-    blue = data.venta
-    //console.log(data.venta)
 }
 
 pruebaDolar();
@@ -137,8 +146,9 @@ botonHTML.addEventListener("click", () =>{
 const checkOutContainer = document.getElementById("checkOutContainer");
 
 // -----------------VER CARRITO----------------- 
-;
+
 const pintarCarrito = () => {
+   
 
 // Funcionalidad al h1 "ver carrito"
 
@@ -212,8 +222,7 @@ guardarStorage();
 
 //Lo agrego
     headerCheckOut.appendChild(totalDeLaCompra)
-        
-
+       
 }; 
 
 

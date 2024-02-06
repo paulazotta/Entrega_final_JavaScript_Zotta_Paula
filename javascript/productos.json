@@ -57,24 +57,28 @@
     },
     {
         "id": 9,
+        "img": "./imagenes/adaptador_nissan_14.jpg",
         "modelo": "Adaptador Nissan 14 pines",
         "precio": 20,
         "cantidad": 1 
     },
     {
         "id": 10,
+        "img": "./imagenes/adaptador_psa_2.jpg",
         "modelo": "Adaptador PSA 2 pines",
         "precio": 20,
         "cantidad": 1
     },
     {
         "id": 11,
+        "img": "./imagenes/adaptador_benz_14.jpg",
         "modelo": "Adaptador Benz 14 pines",
         "precio": 20,
         "cantidad": 1
     },
     {
         "id": 12,
+        "img": "./imagenes/adaptador_fiat_3.jpg",
         "modelo": "Adaptador Fiat 3 pines",
         "precio": 20,
         "cantidad": 1
